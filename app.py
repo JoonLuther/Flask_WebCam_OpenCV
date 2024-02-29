@@ -11,6 +11,10 @@ import base64
 import io
 from imageio import imread
 import matplotlib.pyplot as plt
+import inspect
+
+if not hasattr(inspect, 'getargspec'):
+    inspect.getargspec = inspect.getfullargspec
 
 app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(stdout))
