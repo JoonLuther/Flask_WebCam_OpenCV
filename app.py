@@ -1,5 +1,5 @@
 from sys import stdout
-from makeup_artist import Makeup_artist
+# from makeup_artist import Makeup_artist
 import logging
 from flask import Flask, render_template, Response
 from flask_socketio import SocketIO, emit
@@ -11,10 +11,6 @@ import base64
 import io
 from imageio import imread
 import matplotlib.pyplot as plt
-import inspect
-
-if not hasattr(inspect, 'getargspec'):
-    inspect.getargspec = inspect.getfullargspec
 
 app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(stdout))
